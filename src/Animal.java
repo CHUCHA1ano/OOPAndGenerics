@@ -22,6 +22,6 @@ public class Animal {
     public void makeSound(){
     }
     public String getType(){
-        return getType();
+        return "Animal";
     }
 }
