@@ -3,10 +3,12 @@ import java.util.ArrayList;
 
 public static void main() {
     ZooEnc <Animal> zoo = new ZooEnc<>();
-    zoo.addAnimal(new Lion());
-    zoo.addAnimal(new Elephant());
+    zoo.addAnimal(new Lion("Mufasa",10));
+    zoo.addAnimal(new Lion ("Simba", 5));
+    zoo.addAnimal(new Elephant("Chokoboy", 11));
     zoo.makeAllSounds();
     zoo.getType();
+    zoo.info();
 }
 
 public static class ZooEnc <T extends Animal>{
@@ -25,6 +27,12 @@ public static class ZooEnc <T extends Animal>{
         for (T Animal : animals){
             Animal.getType();
             System.out.println(Animal.getType());
+        }
+    }
+
+    public void info(){
+        for (T Animal : animals){
+            System.out.println(Animal.getType()+ " - name " + Animal.getName()+ ", " + Animal.getAge()+ " age." );
         }
     }
 }

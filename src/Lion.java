@@ -5,4 +5,8 @@ public class Lion extends Animal{
     public String getType(){
         return "Lion";
     }
+    public Lion(String name, int age){
+        setName(name);
+        setAge(age);
+    }
 }

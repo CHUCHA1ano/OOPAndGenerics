@@ -5,4 +5,8 @@ public class Elephant extends Animal{
     public String getType(){
         return "Elephant";
     }
+    public Elephant (String name, int age){
+        setName(name);
+        setAge(age);
+    }
 }

@@ -5,22 +5,17 @@ public class Animal {
     public Animal(){
     }
 
-    public Animal(int age, String name){
+    public void setAge(int age){
         this.age = age;
+    }
+    public void setName(String name){
         this.name = name;
     }
 
-    public int setAge(int age){
+    public int getAge(){
         return age;
     }
-    public String setName(String name){
-        return name;
-    }
-
-    public int getAge(int age){
-        return age;
-    }
-    public String getName(String name){
+    public String getName(){
         return name;
     }
 
