@@ -1,13 +1,30 @@
-//TIP Чтобы <b>запустить</b> код, нажмите <shortcut actionId="Run"/> или
-// нажмите на значок <icon src="AllIcons.Actions.Execute"/> на полях.
-void main() {
-    //TIP Нажмите <shortcut actionId="ShowIntentionActions"/>, когда курсор находится на подсвеченном тексте,
-    // чтобы увидеть предложения IntelliJ IDEA по исправлению.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.List;
+import java.util.ArrayList;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Нажмите <shortcut actionId="Debug"/>, чтобы начать отладку кода. Мы установили одну <icon src="AllIcons.Debugger.Db_set_breakpoint"/> точку останова
-        // для вас, но вы всегда можете добавить больше, нажав <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public static void main() {
+    ZooEnc <Animal> zoo = new ZooEnc<>();
+    zoo.addAnimal(new Lion());
+    zoo.addAnimal(new Elephant());
+    zoo.makeAllSounds();
+    zoo.getType();
+}
+
+public static class ZooEnc <T extends Animal>{
+    private List <T> animals = new ArrayList<>();
+
+    public void addAnimal(T animal){
+        animals.add(animal);
+    }
+
+    public void makeAllSounds(){
+        for (T Animal : animals){
+            Animal.makeSound();
+        }
+    }
+    public void getType(){
+        for (T Animal : animals){
+            Animal.getType();
+            System.out.println(Animal.getType());
+        }
     }
 }
